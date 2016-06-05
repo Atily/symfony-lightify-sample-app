@@ -1,2 +1,4 @@
-# smyonfy-lightify-sampe-app
-Symonfy 3.1 Sample Application with Lightify Bundle
+lightify
+========
+
+A Symfony project created on June 5, 2016, 7:46 pm.
