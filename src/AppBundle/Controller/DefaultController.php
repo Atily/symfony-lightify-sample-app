@@ -13,13 +13,14 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $client = $this->get('role_lightify.api.client');
-        $devices = $client->listDevices();
+        $deviceManager = $this->get('role_lightify.api.device.manager');
+        $devices = $deviceManager->getList();
 
-        $client->fadeOut($devices[1], 30, 0.5);
-        $client->switchOff($devices[0]);
-        $client->switchOff($devices[1]);
-        $client->switchOff($devices[2]);
+        $deviceManager->toggle(1, false, 10);
+
+        $deviceManager->toggle(2, false);
+
+        $deviceManager->toggle(1, false, 10);
 
         return $this->render(':default:index.html.twig');
     }

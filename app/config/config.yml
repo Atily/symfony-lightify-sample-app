@@ -60,6 +60,13 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
+role_lightify:
+    api:
+        url: https://eu.lightify-api.org/lightify/services
+        username: ~
+        password: ~
+        serial_number: ~
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"
