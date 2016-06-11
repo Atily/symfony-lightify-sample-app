@@ -15,13 +15,8 @@ class DefaultController extends Controller
     {
         $deviceManager = $this->get('role_lightify.api.device.manager');
         $devices = $deviceManager->getList();
+        dump($devices);
 
-        $deviceManager->toggle(1, false, 10);
-
-        $deviceManager->toggle(2, false);
-
-        $deviceManager->toggle(1, false, 10);
-
-        return $this->render(':default:index.html.twig');
+        return $this->render(':default:index.html.twig', ['devices' => $devices]);
     }
 }

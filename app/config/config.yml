@@ -60,6 +60,20 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
+nelmio_api_doc: ~
+
+jms_serializer:
+    metadata:
+        directories:
+            FOSUB:
+                namespace_prefix: "FOS\\UserBundle"
+                path: "%kernel.root_dir%/serializer/FOSUB"
+
+fos_rest:
+    param_fetcher_listener: force
+    routing_loader:
+        default_format: json
+
 role_lightify:
     api:
         url: https://eu.lightify-api.org/lightify/services
